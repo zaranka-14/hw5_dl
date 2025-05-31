@@ -18,6 +18,7 @@ def recall_dog_k(target: list, predict: list[list], k: int) -> float:
         if target[index] in predict[index][:k]:
             positive += 1
 
+    print(f'Recall {str(k)} proceed')
     return positive * 1.0 / len(target)
 
 
@@ -33,4 +34,5 @@ def MRR(target: list, predict: list[list]) -> float:
                 ranks.append(1.0 / (jindex + 1))
                 break
 
+    print("MRR proceed")
     return sum(ranks) * 1.0 / len(target)

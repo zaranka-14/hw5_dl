@@ -4,3 +4,4 @@ class Config:
         self.loss = loss,
         self.lr = lr
         self.batch_size = batch_size
+        self.loss_fn = "contrastive"
